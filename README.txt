@@ -1,17 +1,10 @@
-The cross-validation has been done on the original data set.
-Please put ratings.csv, movies.csv, users.csv and toBeRated.csv in the code directory.
-Instruction on how to run the code: 
-1. user based: 
-a) Jaccard similarity: recommender.py U J ratings.csv
-b) Pearson similarity: recommender.py U P ratings.csv
-c) Cosine similarity: recommender.py U C ratings.csv
-2. item based:
-a) Jaccard similarity: recommender.py I J ratings.csv
-b) Pearson similarity: recommender.py I P ratings.csv
-c) Cosine similarity: recommender.py I C ratings.csv
-3. combine information of users and movies: 
-    recommender.py users.csv movies.csv ratings.csv
-4. To write the result csv file:
-a) to get results1.csv with rating from user based and best similarity: 1 toBeRated.csv ratings.csv
-b) to get results2.csv with rating from item based and best similarity: 2 toBeRated.csv ratings.csv
-c) to get results3.csv with rating from combine method best similarity: 3 toBeRated.csv ratings.csv
+Instruction to run:
+1. to get "result.csv" file: open command line in current directory and type in:
+" Recommender.py ratings.csv toBeRated.csv dimensions learning_rate regularization", for example "Recommender.py ratings.csv toBeRated.csv 5 0.001,0.1"
+
+2. to do cross validation: open command line in current directory and type in:
+"Recommender_CV.py ratings.csv dimensions learning_rate regularization N_fold"
+
+Notes:
+1. The basic regularized MF has been implemented under the maximum iteration for stopping criteria.
+2. The cross validation experiment MF has been implemented under the rmse stablibity of test set for stopping criteria.
